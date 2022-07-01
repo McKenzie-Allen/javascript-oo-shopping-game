@@ -52,7 +52,19 @@ function MagicProduct(id, name, price, expiryDate, points, isBonus) {
         this.isBonus = isBonus
 }
 // Establish inheritance between Product() & MagicProduct() here
+class Rating {
+    constructor () {
+        this.rate = "";
 
+    }
+
+    set rating(value) {
+        if (value > 1 && value <= 4) {this.rate = "OK"}
+        else if (value >= 5 && value <= 7) { this.rate = "Good"}
+        else if (value > 7) {this.rate = "EXCEPTIONAL"}
+        else(this.rate = "BAD")
+    }
+}
 // Define Rating class here
 
 // Complete the loadProducts function
